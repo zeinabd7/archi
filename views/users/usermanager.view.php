@@ -84,7 +84,7 @@ function addToken(id){
    		 }).then(function(){
 		$.ajax({
 			type: "POST",
-			url: "ajax.generate_token.php",
+			url: "<?=URL?>/ajax.generate_token.php",
 			data:{
 				id: id
 			},
@@ -128,7 +128,7 @@ function addToken(id){
    		 }).then(function(){
 		$.ajax({
 			type: "POST",
-			url: "ajax.delete_token.php",
+			url: "<?=URL?>/ajax.delete_token.php",
 			data:{
 				id: id
 			},
@@ -173,7 +173,7 @@ function addToken(id){
    		 }).then(function(){
 		$.ajax({
 			type: "POST",
-			url: "ajax.delete_user.php",
+			url: "<?=URL?>/ajax.delete_user.php",
 			data:{
 				id: id
 			},
@@ -226,7 +226,7 @@ function addToken(id){
 			if (result.isConfirmed) {
 				$.ajax({
 					type: "POST",
-					url: "ajax.add_user.php",
+					url: "<?=URL?>/ajax.add_user.php",
 					data:{
                         login: $('#alogin').val(),
                         password: $('#apass').val(),
@@ -283,7 +283,7 @@ function addToken(id){
 			if (result.isConfirmed) {
 			$.ajax({
 					type: "POST",
-					url: "ajax.update_user.php",
+					url: "<?=URL?>/ajax.update_user.php",
 					data:{
 						id:id,
 						login: document.getElementById('ulogin').value,
